@@ -3,8 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <script src="js/jquery.js"></script>
 </head>
 <body>
     <h1>Hello Git</h1>
+    <div id="test02">
+        <ul></ul>
+    </div>
 </body>
+<script>
+    var book = [{
+        title:'hello everBody!',
+        key:'name',
+        year:2000
+    },{
+        title:'hello everBody!',
+        key:'ruse',
+        year:2001
+    }];
+    $.each(book,function(i,n){
+        console.log('book:',i);
+        console.log('book.key:', n.key);
+        $('#test02 ul').append('<li>'+ n.key +'</li>')
+    });
+
+</script>
 </html>
